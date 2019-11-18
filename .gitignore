@@ -1,6 +1,2 @@
-*
-
-!dist
-!package.json
-!.gitignore
-!.git
+node_modules
+.cache
