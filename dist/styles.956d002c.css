@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Calistoga&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9687b7;
+}
+
+.container {
+  width: 100vw;
+}
+
+.flex-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  padding: 8vw;
+}
+
+.flex-container-item {
+  width: 50%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(/Koshi1.74f5c1a9.jpg);
+  background-position: left;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main h1 {
+  color: #0000009c;
+  font-size: 48px;
+  font-family: "Calistoga", cursive;
+  position: relative;
+  animation: header-animation 1s ease-in-out;
+  left: -50px;
+  top: -50px;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+main li {
+  /* display: inline; */
+  margin: 10px;
+}
+
+main nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+main a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.about {
+  padding: 5vw;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/*
+  Animtions
+*/
+
+@keyframes header-animation {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*# sourceMappingURL=/styles.956d002c.css.map */
