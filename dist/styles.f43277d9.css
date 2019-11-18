@@ -71,18 +71,19 @@ main nav {
 main a {
   text-decoration: none;
   color: #fff;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 main a:hover {
   color: #000;
   background-color: rgb(255, 255, 255, 0.6);
+  border: none;
 }
 
 main a:focus {
-  color: #000;
   outline: none;
-  background-color: rgb(255, 255, 255 0.6);
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .about {
