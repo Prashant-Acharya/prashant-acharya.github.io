@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Nav from './Components/Nav';
-import About from './Components/About';
+import Nav from './Components/nav';
+import About from './Components/about';
+import Contact from './Components/contact';
+import '../styles/styles.css';
 
 const App = () => {
   return (
@@ -17,6 +19,7 @@ const App = () => {
         <article className='flex-container-item about'>
           <Switch>
             <Route exact path='/' component={About} />
+            <Route exact path='/contact' component={Contact} />
           </Switch>
         </article>
       </div>

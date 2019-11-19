@@ -35703,7 +35703,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/scripts/Components/Nav.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"src/scripts/Components/nav.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35721,17 +35721,60 @@ var Nav = function Nav() {
   return _react.default.createElement("nav", null, _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/"
   }, "About")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.NavLink, {
-    to: "/portfolio"
-  }, "Portfolio")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.NavLink, {
-    to: "/experience"
-  }, "Experience")), _react.default.createElement("li", null, _react.default.createElement(_reactRouterDom.NavLink, {
     to: "/contact"
   }, "Contact"))));
 };
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/scripts/Components/About.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/scripts/content.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = content = {
+  about: "I am Prashant, a computer science student and a web developer from Kathmandu, Nepal.  \n          I like writing blogs, watching conference talks, organizing events and leading communities.\n          I occasionally write blogs for my website https://bigomega.dev.\n          ",
+  contact: {
+    github: 'https://github.com/prashant-acharya',
+    instagram: 'https://instagram.com/prashant_acharya_',
+    twitter: 'https://twitter.com/dev_prashaant',
+    blog: 'https://bigomega.dev'
+  }
+};
+
+exports.default = _default;
+},{}],"src/scripts/Components/about.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _content = _interopRequireDefault(require("../content"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var About = function About() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", null, _content.default.about));
+};
+
+var _default = About;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../content":"src/scripts/content.js"}],"src/scripts/Components/Icons/twitter.png":[function(require,module,exports) {
+module.exports = "/twitter.25536aae.png";
+},{}],"src/scripts/Components/Icons/github.png":[function(require,module,exports) {
+module.exports = "/github.2c21e3bc.png";
+},{}],"src/scripts/Components/Icons/instagram.png":[function(require,module,exports) {
+module.exports = "/instagram.cf0f4133.png";
+},{}],"src/scripts/Components/Icons/website.png":[function(require,module,exports) {
+module.exports = "/website.81b5f145.png";
+},{}],"src/scripts/Components/socialmediaicons.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35743,13 +35786,168 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = function About() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", null, "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum nostrum dolor inventore quo maxime est iure sapiente ea debitis provident sunt pariatur aliquam accusamus vero voluptatibus tenetur dignissimos, libero illum. Id eos beatae ad ullam error unde? Sequi nihil quis ipsam pariatur ullam praesentium exercitationem perspiciatis? Necessitatibus, minima. Quas in laborum laudantium nihil iusto obcaecati, repellendus voluptatem at odio unde. Rerum voluptas molestias dolor in deserunt error nam, quaerat delectus sint enim eligendi quisquam tempora totam maiores facilis? Laborum illo voluptatibus magni mollitia cumque placeat ab assumenda sint cum veritatis. Magnam eos sequi voluptatum. Ab quibusdam corrupti, a officia voluptatum doloribus, nesciunt corporis perspiciatis"));
+var SocialIcons = function SocialIcons(_ref) {
+  var image = _ref.image,
+      link = _ref.link,
+      name = _ref.name;
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("a", {
+    href: link,
+    target: "_blank"
+  }, _react.default.createElement("img", {
+    src: image,
+    alt: name
+  })));
 };
 
-var _default = About;
+var _default = SocialIcons;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"src/scripts/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/scripts/Components/contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _twitter = _interopRequireDefault(require("./Icons/twitter.png"));
+
+var _github = _interopRequireDefault(require("./Icons/github.png"));
+
+var _instagram = _interopRequireDefault(require("./Icons/instagram.png"));
+
+var _website = _interopRequireDefault(require("./Icons/website.png"));
+
+var _socialmediaicons = _interopRequireDefault(require("./socialmediaicons"));
+
+var _content = _interopRequireDefault(require("../content"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _content$contact = _content.default.contact,
+    twitter = _content$contact.twitter,
+    github = _content$contact.github,
+    instagram = _content$contact.instagram,
+    blog = _content$contact.blog;
+
+var Contact = function Contact() {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", {
+    style: {
+      textAlign: 'center'
+    }
+  }, "Hit me up ", _react.default.createElement("span", {
+    style: {
+      textShadow: 'black 0px 1px 4px'
+    }
+  }, "\uD83D\uDE09")), _react.default.createElement("div", {
+    className: "icons-container"
+  }, _react.default.createElement(_socialmediaicons.default, {
+    image: _twitter.default,
+    link: twitter,
+    name: "Twitter"
+  }), _react.default.createElement(_socialmediaicons.default, {
+    image: _github.default,
+    link: github,
+    name: "GitHub"
+  }), _react.default.createElement(_socialmediaicons.default, {
+    image: _instagram.default,
+    link: instagram,
+    name: "Instagram"
+  }), _react.default.createElement(_socialmediaicons.default, {
+    image: _website.default,
+    link: blog,
+    name: "Blog"
+  })), _react.default.createElement("p", {
+    className: "icons8",
+    style: {
+      textAlign: 'center',
+      fontSize: 12
+    }
+  }, _react.default.createElement("a", {
+    href: "https://icons8.com/",
+    target: "_blank",
+    style: {
+      color: 'black'
+    }
+  }, "icons from icons8.com")));
+};
+
+var _default = Contact;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Icons/twitter.png":"src/scripts/Components/Icons/twitter.png","./Icons/github.png":"src/scripts/Components/Icons/github.png","./Icons/instagram.png":"src/scripts/Components/Icons/instagram.png","./Icons/website.png":"src/scripts/Components/Icons/website.png","./socialmediaicons":"src/scripts/Components/socialmediaicons.js","../content":"src/scripts/content.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles/styles.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../images/Koshi1.jpg":[["Koshi1.5499ebd0.jpg","src/images/Koshi1.jpg"],"src/images/Koshi1.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/scripts/app.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -35758,9 +35956,13 @@ var _reactDom = require("react-dom");
 
 var _reactRouterDom = require("react-router-dom");
 
-var _Nav = _interopRequireDefault(require("./Components/Nav"));
+var _nav = _interopRequireDefault(require("./Components/nav"));
 
-var _About = _interopRequireDefault(require("./Components/About"));
+var _about = _interopRequireDefault(require("./Components/about"));
+
+var _contact = _interopRequireDefault(require("./Components/contact"));
+
+require("../styles/styles.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35769,17 +35971,21 @@ var App = function App() {
     className: "container flex-container"
   }, _react.default.createElement("main", {
     className: "flex-container-item"
-  }, _react.default.createElement(_Nav.default, null), _react.default.createElement("h1", null, "Prashant Acharya")), _react.default.createElement("article", {
+  }, _react.default.createElement(_nav.default, null), _react.default.createElement("h1", null, "Prashant Acharya")), _react.default.createElement("article", {
     className: "flex-container-item about"
   }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
-    component: _About.default
+    component: _about.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/contact",
+    component: _contact.default
   })))));
 };
 
 (0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById('app'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Nav":"src/scripts/Components/Nav.js","./Components/About":"src/scripts/Components/About.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/nav":"src/scripts/Components/nav.js","./Components/about":"src/scripts/Components/about.js","./Components/contact":"src/scripts/Components/contact.js","../styles/styles.css":"src/styles/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -35807,7 +36013,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44471" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
