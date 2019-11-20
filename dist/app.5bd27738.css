@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Vibes&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro');
+
+:root {
+  --content-font: 'Advent Pro', sans-serif;
+}
 
 * {
   margin: 0;
@@ -9,7 +12,7 @@
 
 body {
   background-color: aliceblue;
-  font-family: Nunito, serif;
+  font-family: var(--content-font);
 }
 
 .container {
@@ -29,11 +32,16 @@ body {
   width: 50%;
 }
 
+.card {
+  box-shadow: 5px 5px 5px #aaa9ac;
+}
+
 main {
   height: 100%;
   width: 100%;
   background-image: url(/Koshi1.5499ebd0.jpg);
-  font-family: 'Vibes', cursive;
+  font-family: var(--content-font);
+  font-weight: lighter;
   background-position: left;
   background-size: cover;
   display: flex;
@@ -43,8 +51,9 @@ main {
 }
 
 main h1 {
-  color: #0000009c;
+  color: #0f1012;
   font-size: 48px;
+  font-weight: lighter;
   position: relative;
   animation: header-animation 1s ease-in-out;
   left: -50px;
@@ -59,13 +68,13 @@ main ul {
 
 main li {
   /* display: inline; */
-  margin: 10px;
+  margin: 10px 0px;
 }
 
 main nav {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: 0;
   font-size: 30px;
   font-weight: bolder;
 }
@@ -73,7 +82,7 @@ main nav {
 main a {
   text-decoration: none;
   color: #fff;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 main a:hover {
@@ -84,8 +93,6 @@ main a:hover {
 
 main a:focus {
   outline: none;
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.6);
   border: none;
 }
 
@@ -113,20 +120,28 @@ main a:focus {
   border: none;
 }
 
-.icons8 {
+.icons8 a {
   text-align: 'center';
   font-size: 16px;
 }
 
-.icons8 a {
+.icons8 a,
+.link {
   color: black;
   text-decoration: none;
   border-bottom: 1px solid black;
 }
 
-.icons8 a:focus {
+a:hover,
+.link:hover {
+  border: none;
+}
+
+a:focus,
+.link:focus {
   outline: none;
 }
+
 /*
   Animtions
 */
@@ -148,13 +163,14 @@ main a:focus {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  main h1 {
-    font-size: 36px;
+@media only screen and (max-width: 600px) {
+  .flex-container {
+    padding: 0;
+    overflow: hidden;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
   main h1 {
     top: 0;
     left: 0;
@@ -166,7 +182,8 @@ main a:focus {
 
   .flex-container-item {
     width: 100%;
-    min-height: 200px;
+    min-height: 300px;
+    box-shadow: none;
   }
 }
 

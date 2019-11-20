@@ -35739,10 +35739,17 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var about = "I am Prashant, a computer science student and a web developer from Kathmandu, Nepal.  \n                I like writing blogs, watching conference talks, organizing events and leading communities.\n                I occasionally write blogs for my website https://bigomega.dev.\n                ";
-
 var About = function About() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", null, about));
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", {
+    style: {
+      fontSize: 20,
+      letterSpacing: 1
+    }
+  }, "I am Prashant, a computer science student and a web developer from Kathmandu, Nepal. I like writing blogs, watching conference talks, organizing events and leading communities. I occasionally write blogs for my website", ' ', _react.default.createElement("a", {
+    href: "https://bigomega.dev",
+    target: "_blank",
+    className: "link"
+  }, "https://bigomega.dev"), "."));
 };
 
 var _default = About;
@@ -35821,11 +35828,7 @@ var Contact = function Contact() {
     style: {
       textAlign: 'center'
     }
-  }, "Hit me up ", _react.default.createElement("span", {
-    style: {
-      textShadow: 'black 0px 1px 4px'
-    }
-  }, "\uD83D\uDE09")), _react.default.createElement("div", {
+  }, "Hit me up \uD83D\uDE09"), _react.default.createElement("div", {
     className: "icons-container"
   }, _react.default.createElement(_socialmediaicons.default, {
     image: _twitter.default,
@@ -35955,9 +35958,9 @@ var App = function App() {
   return _react.default.createElement(_reactRouterDom.BrowserRouter, null, _react.default.createElement("div", {
     className: "container flex-container"
   }, _react.default.createElement("main", {
-    className: "flex-container-item"
+    className: "flex-container-item card"
   }, _react.default.createElement(_nav.default, null), _react.default.createElement("h1", null, "Prashant Acharya")), _react.default.createElement("article", {
-    className: "flex-container-item about"
+    className: "flex-container-item about card"
   }, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/",
@@ -35998,7 +36001,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37775" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40803" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

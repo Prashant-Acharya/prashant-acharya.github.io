@@ -11,12 +11,12 @@ const App = () => {
   return (
     <Router>
       <div className='container flex-container'>
-        <main className='flex-container-item'>
+        <main className='flex-container-item card'>
           <Nav />
           <h1>Prashant Acharya</h1>
         </main>
 
-        <article className='flex-container-item about'>
+        <article className='flex-container-item about card'>
           <Switch>
             <Route exact path='/' component={About} />
             <Route exact path='/contact' component={Contact} />

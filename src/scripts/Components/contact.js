@@ -17,10 +17,8 @@ const contact = {
 const { twitter, github, instagram, blog } = contact;
 
 const Contact = () => (
-  <React.Fragment>
-    <h2 style={{ textAlign: 'center' }}>
-      Hit me up <span style={{ textShadow: 'black 0px 1px 4px' }}>😉</span>
-    </h2>
+  <>
+    <h2 style={{ textAlign: 'center' }}>Hit me up 😉</h2>
 
     <div className='icons-container'>
       <SocialIcons image={twitterIcon} link={twitter} name='Twitter' />
@@ -34,7 +32,7 @@ const Contact = () => (
         icons from icons8.com
       </a>
     </p>
-  </React.Fragment>
+  </>
 );
 
 export default Contact;
