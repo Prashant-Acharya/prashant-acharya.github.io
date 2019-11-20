@@ -35863,7 +35863,30 @@ var Contact = function Contact() {
 
 var _default = Contact;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Icons/twitter.png":"src/scripts/Components/Icons/twitter.png","./Icons/github.png":"src/scripts/Components/Icons/github.png","./Icons/instagram.png":"src/scripts/Components/Icons/instagram.png","./Icons/website.png":"src/scripts/Components/Icons/website.png","./socialmediaicons":"src/scripts/Components/socialmediaicons.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Icons/twitter.png":"src/scripts/Components/Icons/twitter.png","./Icons/github.png":"src/scripts/Components/Icons/github.png","./Icons/instagram.png":"src/scripts/Components/Icons/instagram.png","./Icons/website.png":"src/scripts/Components/Icons/website.png","./socialmediaicons":"src/scripts/Components/socialmediaicons.js"}],"src/scripts/Components/pagenotfound.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PageNotFound = function PageNotFound() {
+  return _react.default.createElement("div", null, _react.default.createElement("h2", null, "Oops, Page Not Found"), _react.default.createElement(_reactRouterDom.Link, {
+    to: "/",
+    className: "link"
+  }, "Redirect to home page instead"));
+};
+
+var _default = PageNotFound;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -35950,6 +35973,8 @@ var _about = _interopRequireDefault(require("./Components/about"));
 
 var _contact = _interopRequireDefault(require("./Components/contact"));
 
+var _pagenotfound = _interopRequireDefault(require("./Components/pagenotfound"));
+
 require("../styles/styles.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -35969,11 +35994,13 @@ var App = function App() {
     exact: true,
     path: "/contact",
     component: _contact.default
+  }), _react.default.createElement(_reactRouterDom.Route, {
+    component: _pagenotfound.default
   })))));
 };
 
 (0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById('app'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/nav":"src/scripts/Components/nav.js","./Components/about":"src/scripts/Components/about.js","./Components/contact":"src/scripts/Components/contact.js","../styles/styles.css":"src/styles/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/nav":"src/scripts/Components/nav.js","./Components/about":"src/scripts/Components/about.js","./Components/contact":"src/scripts/Components/contact.js","./Components/pagenotfound":"src/scripts/Components/pagenotfound.js","../styles/styles.css":"src/styles/styles.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -36001,7 +36028,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40803" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43117" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

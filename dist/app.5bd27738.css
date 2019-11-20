@@ -185,6 +185,10 @@ a:focus,
     min-height: 300px;
     box-shadow: none;
   }
+
+  main .nav {
+    font-size: 20px;
+  }
 }
 
 
