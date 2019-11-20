@@ -35727,26 +35727,7 @@ var Nav = function Nav() {
 
 var _default = Nav;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/scripts/content.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _default = content = {
-  about: "I am Prashant, a computer science student and a web developer from Kathmandu, Nepal.  \n          I like writing blogs, watching conference talks, organizing events and leading communities.\n          I occasionally write blogs for my website https://bigomega.dev.\n          ",
-  contact: {
-    github: 'https://github.com/prashant-acharya',
-    instagram: 'https://instagram.com/prashant_acharya_',
-    twitter: 'https://twitter.com/dev_prashaant',
-    blog: 'https://bigomega.dev'
-  }
-};
-
-exports.default = _default;
-},{}],"src/scripts/Components/about.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"src/scripts/Components/about.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -35756,17 +35737,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _content = _interopRequireDefault(require("../content"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var about = "I am Prashant, a computer science student and a web developer from Kathmandu, Nepal.  \n                I like writing blogs, watching conference talks, organizing events and leading communities.\n                I occasionally write blogs for my website https://bigomega.dev.\n                ";
+
 var About = function About() {
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", null, _content.default.about));
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", null, "About Me"), _react.default.createElement("p", null, about));
 };
 
 var _default = About;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../content":"src/scripts/content.js"}],"src/scripts/Components/Icons/twitter.png":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"src/scripts/Components/Icons/twitter.png":[function(require,module,exports) {
 module.exports = "/twitter.25536aae.png";
 },{}],"src/scripts/Components/Icons/github.png":[function(require,module,exports) {
 module.exports = "/github.2c21e3bc.png";
@@ -35821,15 +35802,19 @@ var _website = _interopRequireDefault(require("./Icons/website.png"));
 
 var _socialmediaicons = _interopRequireDefault(require("./socialmediaicons"));
 
-var _content = _interopRequireDefault(require("../content"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _content$contact = _content.default.contact,
-    twitter = _content$contact.twitter,
-    github = _content$contact.github,
-    instagram = _content$contact.instagram,
-    blog = _content$contact.blog;
+// import content from '../content';
+var contact = {
+  github: 'https://github.com/prashant-acharya',
+  instagram: 'https://instagram.com/prashant_acharya_',
+  twitter: 'https://twitter.com/dev_prashaant',
+  blog: 'https://bigomega.dev'
+};
+var twitter = contact.twitter,
+    github = contact.github,
+    instagram = contact.instagram,
+    blog = contact.blog;
 
 var Contact = function Contact() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("h2", {
@@ -35875,7 +35860,7 @@ var Contact = function Contact() {
 
 var _default = Contact;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./Icons/twitter.png":"src/scripts/Components/Icons/twitter.png","./Icons/github.png":"src/scripts/Components/Icons/github.png","./Icons/instagram.png":"src/scripts/Components/Icons/instagram.png","./Icons/website.png":"src/scripts/Components/Icons/website.png","./socialmediaicons":"src/scripts/Components/socialmediaicons.js","../content":"src/scripts/content.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./Icons/twitter.png":"src/scripts/Components/Icons/twitter.png","./Icons/github.png":"src/scripts/Components/Icons/github.png","./Icons/instagram.png":"src/scripts/Components/Icons/instagram.png","./Icons/website.png":"src/scripts/Components/Icons/website.png","./socialmediaicons":"src/scripts/Components/socialmediaicons.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -36013,7 +35998,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

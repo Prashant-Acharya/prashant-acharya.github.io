@@ -1,4 +1,4 @@
-export default content = {
+const content = {
   about: `I am Prashant, a computer science student and a web developer from Kathmandu, Nepal. \ 
           I like writing blogs, watching conference talks, organizing events and leading communities.
           I occasionally write blogs for my website https://bigomega.dev.
@@ -11,3 +11,5 @@ export default content = {
     blog: 'https://bigomega.dev'
   }
 };
+
+export default content;

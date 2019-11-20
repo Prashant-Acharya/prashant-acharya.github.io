@@ -5,9 +5,16 @@ import githubIcon from './Icons/github.png';
 import instagramIcon from './Icons/instagram.png';
 import websiteIcon from './Icons/website.png';
 import SocialIcons from './socialmediaicons';
-import content from '../content';
+// import content from '../content';
 
-const { twitter, github, instagram, blog } = content.contact;
+const contact = {
+  github: 'https://github.com/prashant-acharya',
+  instagram: 'https://instagram.com/prashant_acharya_',
+  twitter: 'https://twitter.com/dev_prashaant',
+  blog: 'https://bigomega.dev'
+};
+
+const { twitter, github, instagram, blog } = contact;
 
 const Contact = () => (
   <React.Fragment>
